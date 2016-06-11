@@ -1,9 +1,8 @@
 var slides = [
 	{
 		title : [
-			"Rubik's Cube Competition",
+			"Singapore Cubewerkz Open 2016",
 			"Judge Training",
-			"Part I"
 		],
 	},
 	{
@@ -20,7 +19,7 @@ var slides = [
 		contents : [
 			"Collect the puzzle and the scoresheet from scrambling area",
 			"Check the puzzle to ensure that there is no misalignments",
-			"Cover the puzzle with the box and make sure no one can see",
+			"Cover the puzzle with the cover and make sure no one can see",
 			"Puzzle should be always with the correct scoresheet"
 		]
 	},
@@ -28,7 +27,7 @@ var slides = [
 		title : ["Step 2: Call the competitor"],
 		contents : [
 			"Call the NO. on the scoresheet. The competitor may choose any vacant seat",
-			"Or you can choose the table first, and put the puzzle covered by the box on the table\
+			"Or you can choose the table first, and put the puzzle covered by the cover on the table\
 			<br> Then call the competitor to come to the table",
 			"If no response, try to call the name"
 		]
@@ -68,7 +67,7 @@ var slides = [
 	{
 		title : ["Step 5: Watch the attempt"],
 		contents : [
-			"When the competitor confirms his readiness <br> Uncover the puzzle by removing the box<br>and start the stopwatch exactly after uncovering",
+			"When the competitor confirms his readiness <br> Uncover the puzzle by removing the cover<br>and start the stopwatch exactly after uncovering",
 			"This is the beginning of the " + keyword("Inspection")
 		]
 	},
@@ -100,7 +99,7 @@ var slides = [
 		title : ["Step 5: Watch the attempt (Starting)"],
 		contents : [
 			"After inspection, the competitor places the puzzle on the mat, in any orientation and position.",
-			"The puzzle must not rest on the timer." + p2(),
+			"The puzzle must not be placed outside the mat." + p2(),
 			"The competitor uses their fingers to touch the elevated sensor surfaces of the timer.\
 			The competitor’s palms must be facing down." + p2(),
 			"The competitor must have no physical contact with the puzzle between the inspection period and the beginning of the solve." + p2(),
@@ -225,8 +224,11 @@ var slides = [
 		title: ["Step 6: Check the puzzle"],
 		contents : [
 			"For each two adjacent parts (e.g. two parallel, adjacent slices of a cube) of the puzzle that are misaligned " + 
-			keyword(" more than 45 degrees") +
-			", the puzzle is considered to require " + keyword("one additional move") +" to solve",
+			keyword("more than") + unorderdList([
+				"NxNxN puzzles: 45 degrees.",
+				"Pyraminx and Skewb: 60 degrees.",
+			]),
+			"the puzzle is considered to require " + keyword("one additional move") +" to solve",
 			"If one move is required, the puzzle is be considered solved with a" + p2(),
 			"If more than one move is required, the puzzle is considered unsolved" + dnf(),
 			
@@ -264,16 +266,13 @@ var slides = [
 	},
 	{
 		title: ["Step 8: After recording", "Reset the timer!!!"],
-		contents : [
-			"For events using 3x3 or 2x2, ask the competitor to stay at the table to wait for the next solve.",
-			"Otherwise (for 4x4), ask the competitor to leave the table and only come back if he is called for the next solve."
-		]
 	},
 	{
 		title: ["Step 9: Return"],
 		contents : [
 			"If this is not the last (5th) attempt:",
-			"Put the solved puzzle back into the box",
+			"Put the solved puzzle back into the cover",
+			"Ask the competitor to stay at the station to wait for the next attempt.",
 			"Return the puzzle and scoresheet to the scrambling area"
 		]
 	},
@@ -296,6 +295,15 @@ var slides = [
 		]
 	},
 	{
+		title : ["One-Handed"],
+		contents : [
+			"During the solve, the competitor must use only one hand to touch the puzzle." + dnf(),
+			"Once a competitor touches the puzzle with one hand, they must not touch the puzzle with the other hand." + dnf(),
+			"If a puzzle defect occurs, and the competitor chooses to repair it, they must repair it using only the solving hand." + dnf(),
+			"The competitor may use both hands during inspection."
+		]
+	},
+	{
 		title: ["Extra Attempt?"],
 		contents : [
 			"If the competitor is given one or more extra attempts for any reason, which includes (but not limited to):" +
@@ -304,9 +312,9 @@ var slides = [
 				"Timer low battery",
 				"Timer not reset before starting the attempt"
 			]),
-			"The result for the corresponding attempt should be " + keyword("Marked with 'E' in Displayed Time") + ". The other regularly numbered attempts should be completed first.",
-			"And extra attempts should be done afterwards.\
-			The results from the extra attempts should replace the regularly numbered attempts that caused them, in increasing order."
+			"The result for the corresponding attempt should be " + keyword("marked with 'E' in Displayed Time"),
+			"Please inform the scrambler that the puzzle need to be scrambled for extra attempt",
+			"If there was already one extra attempt for the competitor, please inform the scrambler about it"
 		]
 	},
 	{
@@ -315,9 +323,80 @@ var slides = [
 			"After the last (5th) Attempt:",
 			"Return the puzzle to the competitor",
 			"Return the scoresheet to the score taker",
-			"...<br>Re-start from step 1"
+			"...<br>Re-start from step 1",
+			"More slides on special rules about blindfolded solving after this"
 		]
 	},
+	{
+		title : ["Blindfolded"],
+		contents : [
+			"The competitor supplies their own blindfold. <br>The judge should check the blindfold",
+			keyword("There is NO inspection period.")
+		]
+	},
+	{
+		title : ["Blindfolded (Starting)"],
+		contents : [
+			"The competitor uses their fingers to touch the elevated sensor surfaces of the timer.",
+			"The competitor must have no physical contact with the puzzle before the beginning of the attempt." + p2(),
+			"The competitor starts the attempt by removing their hands from the timer, thus starting the timer.",
+			"Then removes the cover box from the puzzle after starting the timer. (Starting of memorisation phase)"
+		]
+	},
+	{
+		title : ["Blindfolded (Solving)<br>Memorisation Phase"],
+		contents : [
+			"The competitor may pick up the puzzle during the memorisation phase.",
+			"The competitor must not make physical notes." + dnf(),
+			"The competitor must not apply moves to the puzzle during the memorisation phase." + dnf()
+		]
+	},
+	{
+		title : ["Blindfolded (Solving)<br>Blindfolded Phase"],
+		contents : [
+			"The competitor dons the blindfold to start the blindfolded phase. (end of memorisation phase)",
+			"The competitor must not apply moves to the puzzle before they have fully donned the blindfold." + dnf(),
+			"Until the competitor applies the first move to the puzzle, they may remove the blindfold to return to the memorisation phase.",
+		]
+	},
+	{
+		title : ["Blindfolded (Solving)<br>Blindfolded Phase"],
+		contents : [
+			"The judge places a cardboard between the competitor’s face and the puzzle while the competitor is solving.\
+			<br>Be careful not to touch any body parts of the competitor.",
+			"The competitor must not look at the puzzle at any point during the blindfolded phase." + dnf(),
+			"If a puzzle defect occurs, the competitor must repair the puzzle blindfolded." + dnf()
+		]
+	},
+	{
+		title : ["Blindfolded (Stopping)"],
+		contents : [
+			"The competitor stops the attempt by releasing the puzzle and then stopping the timer.",
+			"If the competitor is not touching the puzzle, they may remove the blindfold before they stop the timer.\
+			They must not touch the puzzle until the end of the attempt." + dnf()
+		]
+	},
+	{
+		title : ["Blindfolded (Time limit)"],
+		contents : [
+			"Please rememeber to " + keyword("always record the displayed time") + " no matter if it is DNF or not",
+			"For 3x3 Blindfolded, the " + keyword("cumulative time limit is 15 minutes"),
+			"When the time limit is reached, the player should be stopped immediately for the attempt, the result of that attempt will be <b class='dnf'>DNF</b>",
+			"The result of the remaining attempt (if any) should be " + dns()
+		]
+	},
+	{
+		title : ["Blindfolded (Time limit)"],
+		contents : [
+			"Examples:",
+			unorderdList([
+				"1st attempt: 7 minutes<br>2nd attempt: 6 minutes"
+				+ "<br>3rd attempt: must be stopped at 2 minutes" + dnf(),
+				"1st attempt: 9 minutes<br>2nd attempt: Must be stopped at 6 minutes" + dnf()
+				+ "<br>3rd attempt: " + dns(),
+			]),
+		]
+	}
 ];
 
 renderSlides(slides);
