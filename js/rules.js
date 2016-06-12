@@ -396,6 +396,9 @@ var slides = [
 				+ "<br>3rd attempt: " + dns(),
 			]),
 		]
+	},
+	{
+		title : ["The End<br>Ask Yichen for any questions!"]
 	}
 ];
 
